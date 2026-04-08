@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class Arraystate extends ChangeNotifier {
   List<int> array= [];
@@ -6,7 +7,9 @@ class Arraystate extends ChangeNotifier {
 
 
 void generateRandomArray(int size){
-  array = List.generate(size, (_)=> (10+ (DateTime.now().millisecond%300)) );
+  final random= Random();
+
+  array = List.generate(size, (_)=> (10+ random.nextInt(300)) );
 
   highlighted.clear();
   notifyListeners();
