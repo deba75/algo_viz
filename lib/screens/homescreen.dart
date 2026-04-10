@@ -14,9 +14,12 @@ class HomeScreen extends StatelessWidget {
       padding: EdgeInsets.all(16),
       
         children: [
-          _buildCard(context, "Bubble Sort", Colors.red, '/bubble'),
+          _buildCard(context, "Bubble", Colors.red, '/bubble'),
           _buildCard(context, "Quick Sort", Colors.blue, '/quick'),
           _buildCard(context,"Selection Sort", Colors.purple, '/selection'),
+          _buildCard(context, "Insertion", Colors.orange, '/insertion'),
+          _buildCard(context, "Merge Sort", Colors.cyan, '/merge sort'),
+          
 
         ]
       

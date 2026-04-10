@@ -42,6 +42,18 @@ class _VisualizerScreenState extends State<VisualizerScreen> {
         case 'selection sort':
           await SortingAlgorithm.selectionSort(arrayState, speed, onComplete);
           break;
+        case 'quick sort':
+          await SortingAlgorithm.quickSort(arrayState, speed, 0, arrayState.array.length-1 , onComplete);
+          break;
+
+        case 'insertion sort':
+         await SortingAlgorithm.insertionSort(arrayState, speed, onComplete);
+         break;
+
+
+        case 'merge sort':
+         await SortingAlgorithm.mergeSort(arrayState, speed, onComplete);
+         break;
 
         default:
           ScaffoldMessenger.of(context).showSnackBar(
